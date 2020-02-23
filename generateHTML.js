@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+const colors = {
+    blue: {
+        background: "rgb(0, 195, 255)",
+    },
+    red: {
+        background: "rgb(164, 36, 36)",
+    },
+    green: {
+        background: "rgb(0, 136, 0)",
+    },
+    yellow: {
+        background: "rgb(255, 255, 95)",
+    },
+}
+
+function generateHTML(data) {
+return `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,13 +41,13 @@
     }
     .top-container{
         position:relative;
-        background-color:rgb(0, 195, 255);
+        background-color:${colors[data.color].background};
         color: black;
         text-align:center;
     }
     .bottom-container{
         position:relative;
-        background-color:rgb(0, 195, 255);
+        background-color:${colors[data.color].background};
         color: black;
         text-align:center;
         display: flex;
@@ -42,31 +58,31 @@
         border: 1px solid black;
     }
     .container-blue{
-        background-color: rgb(0, 195, 255);
+        background-color: ${colors[data.color].background};
     }
     .container-red{
-        background-color: rgb(0, 195, 255);
+        background-color: ${colors[data.color].background};
     }
     .container-green{
-        background-color: rgb(0, 195, 255);
+        background-color: ${colors[data.color].background};
     }
     .container-yellow{
-        background-color: rgb(0, 195, 255);
+        background-color: ${colors[data.color].background};
     }
     .github-container-blue{
-        background-color: rgb(0, 195, 255); 
+        background-color: ${colors[data.color].background}; 
     }
     .github-container-red{
-        background-color: rgb(0, 195, 255);
+        background-color: ${colors[data.color].background};
     }
     .github-container-green{
-        background-color: rgb(0, 195, 255);
+        background-color: ${colors[data.color].background};
     }
     .github-container-yellow{
-        background-color: rgb(0, 195, 255);
+        background-color: ${colors[data.color].background};
     }
     .card{
-        background-color:rgb(0, 195, 255);
+        background-color:${colors[data.color].background};
         height: 150px;
         width:300px;
         text-align:center;
@@ -84,14 +100,14 @@
   </head>
   <body>
     <div class="container top-container text-center container-blue">
-        <img id="profilepic" src="https://avatars1.githubusercontent.com/u/57839925?v=4" alt="profile picture">
+        <img id="profilepic" src="${data.avatar_url}" alt="profile picture">
         <h1>Hello!</h1>
-        <h2>My name is Steve Kindt</h2>
-        <p>My name is Steve Kindt and I am currently a web design student building my skills in a full stack development course. Here are some of the things I've built.</p>
+        <h2>My name is ${data.name}</h2>
+        <p>${data.bio}</p>
         <p>
-            <a href="https://www.google.com/maps/@?api=1&map_action=map&query=Minneapolis, MN" target="_blank">Minneapolis, MN</a>
-            <a href="https://github.com/stevekindt" target="_blank">GitHub</a>
-            <a href="https://stevekindt.github.io/Updated-Portfolio-Page/" target="_blank">Blog</a>
+            <a href="https://www.google.com/maps/@?api=1&map_action=map&query=${data.location}" target="_blank">${data.location}</a>
+            <a href="${data.html_url}" target="_blank">GitHub</a>
+            <a href="${data.blog}" target="_blank">Blog</a>
         </p>
     </div>
     <div class="container bottom-container text-center container-blue">
@@ -99,13 +115,13 @@
             <div class="col-md-8">
                 <div class="card text-center github-container-blue">
                     <h5 class="card-title">Public Repositories</h5>
-                    <p class="card-text">12</p>
+                    <p class="card-text">${data.public_repos}</p>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="card text-center github-container-blue">
                     <h5 class="card-title">Followers</h5>
-                    <p class="card-text">4</p>
+                    <p class="card-text">${data.followers}</p>
                 </div>
             </div>
         </div>
@@ -113,13 +129,13 @@
             <div class="col-md-8">
                 <div class="card text-center github-container-blue">
                     <h5 class="card-title">GitHub Stars</h5>
-                    <p class="card-text">0</p>
+                    <p class="card-text">${data.public_gists}</p>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="card text-center github-container-blue">
                     <h5 class="card-title">Following</h5>
-                    <p class="card-text">5</p>
+                    <p class="card-text">${data.following}</p>
                 </div>
             </div>
         </div>
@@ -136,4 +152,7 @@
     ></script>
     <script type="text/JavaScript" src="index.js"></script>
   </body>
-</html>
+</html>`;
+}
+
+module.exports = generateHTML;
