@@ -10,10 +10,81 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <style>
+    #profilepic{
+        height:175px;
+        width:175px;
+        border-radius:100px;
+        text-align:center;
+        padding:3px;
+        border: 3px solid rgb(0, 195, 255);
+        margin:8px;
+    }
+    .container{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .top-container{
+        position:relative;
+        background-color:lightgray;
+        color: black;
+        text-align:center;
+    }
+    .bottom-container{
+        position:relative;
+        background-color:lightgray;
+        color: black;
+        text-align:center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:60px;
+        margin-bottom:50px;
+        border: 1px solid black;
+    }
+    .container-blue{
+        background-color: rgb(0, 195, 255);
+    }
+    .container-red{
+        background-color: rgb(164, 36, 36);
+    }
+    .container-green{
+        background-color: rgb(0, 136, 0);
+    }
+    .container-yellow{
+        background-color: rgb(255, 255, 95);
+    }
+    .github-container-blue{
+        background-color: rgb(0, 195, 255); 
+    }
+    .github-container-red{
+        background-color: rgb(164, 36, 36);
+    }
+    .github-container-green{
+        background-color: rgb(0, 136, 0);
+    }
+    .github-container-yellow{
+        background-color: rgb(255, 255, 95);
+    }
+    .card{
+        background-color:lightgray;
+        height: 150px;
+        width:300px;
+        text-align:center;
+        border-radius:20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+    }
+    .row{
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
   </head>
   <body>
-    <div class="container">
-        <img src="https://avatars0.githubusercontent.com/u/57839925?s=460&v=4" alt="profile picture">
+    <div class="container top-container text-center container-blue">
+        <img id="profilepic" src="https://avatars0.githubusercontent.com/u/57839925?s=460&v=4" alt="profile picture">
         <h1>Hello!</h1>
         <h2>My name is Steve Kindt</h2>
         <p>I am currently a web design student building my skills in a full stack development course.</p>
@@ -23,28 +94,30 @@
             <a href="" target="_blank">Blog</a>
         </p>
     </div>
-    <div class="container">
+    <div class="container bottom-container text-center container-blue">
         <div class="row">
             <div class="col-md-8">
-                <div class="card text-center">
+                <div class="card text-center github-container-blue">
                     <h5 class="card-title">Public Repositories</h5>
                     <p class="card-text">12</p>
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="card text-center">
+                <div class="card text-center github-container-blue">
                     <h5 class="card-title">Followers</h5>
                     <p class="card-text">4</p>
                 </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-8">
-                <div class="card text-center">
+                <div class="card text-center github-container-blue">
                     <h5 class="card-title">GitHub Stars</h5>
                     <p class="card-text">0</p>
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="card text-center">
+                <div class="card text-center github-container-blue">
                     <h5 class="card-title">Following</h5>
                     <p class="card-text">5</p>
                 </div>
