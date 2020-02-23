@@ -6,4 +6,4 @@ Screenshot
 ![alt text](https://github.com/stevekindt/Developer-Profile-Generator/blob/master/Screen%20Shot%20of%20Generated%20Profile%20.png)
 
 GIF
-
+![](https://github.com/stevekindt/Developer-Profile-Generator/blob/master/profile.gif)
