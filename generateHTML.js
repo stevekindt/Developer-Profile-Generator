@@ -1,20 +1,20 @@
 const colors = {
-    blue: {
-        background: "rgb(0, 195, 255)",
-    },
-    red: {
-        background: "rgb(164, 36, 36)",
-    },
-    green: {
-        background: "rgb(0, 136, 0)",
-    },
-    yellow: {
-        background: "rgb(255, 255, 95)",
-    },
-}
+  blue: {
+    background: "rgb(0, 207, 254)"
+  },
+  red: {
+    background: "rgb(255, 20, 20)"
+  },
+  green: {
+    background: "rgb(18, 222, 0)"
+  },
+  yellow: {
+    background: "rgb(233, 233, 0)"
+  }
+};
 
 function generateHTML(data) {
-return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,7 @@ return `<!DOCTYPE html>
     />
     <style>
     body {
-        background-color: ${colors[data.color].background};
+        background-color: lightgray;
         -webkit-print-color-adjust: exact !important;
       }
     #profilepic{
@@ -88,7 +88,9 @@ return `<!DOCTYPE html>
         <h2>My name is ${data.name}</h2>
         <p>${data.bio}</p>
         <p>
-            <a href="https://www.google.com/maps/@?api=1&map_action=map&query=${data.location}" target="_blank">${data.location}</a>
+            <a href="https://www.google.com/maps/@?api=1&map_action=map&query=${
+              data.location
+            }" target="_blank">${data.location}</a>
             <a href="${data.html_url}" target="_blank">GitHub</a>
             <a href="${data.blog}" target="_blank">Blog</a>
         </p>
