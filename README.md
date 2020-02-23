@@ -7,4 +7,4 @@ Screenshot
 
 GIF
 
-![](Generated-Profile.gif)
+![](https://github.com/stevekindt/Developer-Profile-Generator/blob/master/Generated-Profile.gif.sb-cca89791-5PGJu0)
