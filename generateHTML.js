@@ -27,6 +27,10 @@ return `<!DOCTYPE html>
       crossorigin="anonymous"
     />
     <style>
+    body {
+        background-color: ${colors[data.color].background};
+        -webkit-print-color-adjust: exact !important;
+      }
     #profilepic{
         height:175px;
         width:175px;
@@ -57,30 +61,7 @@ return `<!DOCTYPE html>
         margin-bottom:50px;
         border: 1px solid black;
     }
-    .container-blue{
-        background-color: ${colors[data.color].background};
-    }
-    .container-red{
-        background-color: ${colors[data.color].background};
-    }
-    .container-green{
-        background-color: ${colors[data.color].background};
-    }
-    .container-yellow{
-        background-color: ${colors[data.color].background};
-    }
-    .github-container-blue{
-        background-color: ${colors[data.color].background}; 
-    }
-    .github-container-red{
-        background-color: ${colors[data.color].background};
-    }
-    .github-container-green{
-        background-color: ${colors[data.color].background};
-    }
-    .github-container-yellow{
-        background-color: ${colors[data.color].background};
-    }
+
     .card{
         background-color:${colors[data.color].background};
         height: 150px;
@@ -91,6 +72,8 @@ return `<!DOCTYPE html>
         justify-content: center;
         align-items: center;
         border: 1px solid black;
+        margin: 3px;
+        width: 18rem;
     }
     .row{
         justify-content: center;
