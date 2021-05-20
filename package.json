@@ -19,7 +19,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "generate-html": "^1.0.1",
-    "html-pdf": "^2.2.0",
+    "html-pdf": "^3.0.1",
     "html-pdf-chrome": "^0.6.0",
     "inquirer": "^7.0.4",
     "options": "0.0.6"
